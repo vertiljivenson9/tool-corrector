@@ -1,0 +1,19 @@
+
+## 8. `src/main.js`
+
+```javascript
+import App from './App.js';
+
+// Initialize the application when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    const appContainer = document.getElementById('app');
+    
+    // Remove loading state
+    appContainer.innerHTML = '';
+    
+    // Initialize and render the app
+    const app = new App();
+    appContainer.appendChild(app.render());
+    
+    console.log('Code Editor Tool initialized');
+});
