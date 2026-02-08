@@ -1,11 +1,27 @@
 {
-  "name": "package",
+  "name": "code-editor-tool",
   "version": "1.0.0",
-  "description": "Archivo creado automáticamente por PortalHub Creator v1.3",
-  "main": "index.js",
+  "description": "Local-first secure code editing tool for function replacement",
+  "main": "src/main.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"No tests specified\" && exit 0"
   },
+  "keywords": [
+    "code-editor",
+    "local-first",
+    "function-replacement",
+    "web-tool"
+  ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1"
+  }
 }
