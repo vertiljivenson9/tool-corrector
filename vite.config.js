@@ -1,10 +1,23 @@
-// vite.config.js
-// Archivo creado automáticamente por PortalHub Creator v1.3
+import { defineConfig } from 'vite';
 
-console.log('vite.config.js cargado');
-
-function init() {
-    console.log('Aplicación inicializada');
-}
-
-module.exports = { init };
+export default defineConfig({
+  root: './',
+  publicDir: 'public',
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    sourcemap: false,
+    rollupOptions: {
+      input: {
+        main: './public/index.html'
+      }
+    }
+  },
+  server: {
+    port: 3000,
+    open: true
+  },
+  optimizeDeps: {
+    exclude: ['jszip']
+  }
+});
