@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  root: './',
+  root: '.',
+  base: '/',
   publicDir: 'public',
-  base: '/', // Importante para Cloudflare Pages
   build: {
     outDir: 'dist',
     emptyOutDir: true,
@@ -12,21 +12,26 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html'
-      },
-      output: {
-        manualChunks: undefined
+      }
+    },
+    // Configuración específica para Cloudflare
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: false
       }
     }
   },
   server: {
     port: 3000,
     open: true,
-    cors: true
+    host: true
+  },
+  preview: {
+    port: 3000,
+    host: true
   },
   optimizeDeps: {
     exclude: ['jszip']
-  },
-  esbuild: {
-    target: 'es2020'
   }
 });
