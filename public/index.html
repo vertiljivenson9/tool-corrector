@@ -6,6 +6,7 @@
     <title>Code Editor Tool | Local-First Secure Code Editing</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Cambiar rutas para Cloudflare -->
     <link rel="stylesheet" href="/src/styles/variables.css">
     <link rel="stylesheet" href="/src/styles/base.css">
     <link rel="stylesheet" href="/src/styles/layout.css">
@@ -15,19 +16,17 @@
 </head>
 <body>
     <div id="app">
-        <!-- La aplicación se renderizará aquí -->
         <div class="loading-container">
             <div class="loader"></div>
             <p>Loading Code Editor Tool...</p>
         </div>
     </div>
     
-    <!-- Modal container for dialogs -->
     <div id="modal-root"></div>
     
-    <!-- Third-party libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     
+    <!-- Importar con type="module" y ruta correcta -->
     <script type="module" src="/src/main.js"></script>
 </body>
 </html>
