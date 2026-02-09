@@ -1,5 +1,5 @@
 {
-  "name": "code-editor-tool",
+  "name": "tool-corrector",
   "version": "1.0.0",
   "description": "Local-first secure code editing tool for function replacement",
   "main": "src/main.js",
